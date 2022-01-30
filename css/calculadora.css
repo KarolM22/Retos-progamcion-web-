@@ -1,0 +1,75 @@
+*{
+    font-family:"fraunces", serif ;
+     color: rgb(255, 255, 255); /*color numeors  */
+}
+body {
+    margin: 0;
+    background-color: rgb(71, 148, 192);
+}
+
+.container { /* alinerar y que quede en el cento de la pagina*/
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh ;
+}
+
+.calculadora {
+     display:grid;
+     grid-template-columns: repeat(4, 75px);
+     grid-template-rows: 160px repeat(5, 75px);
+
+     background-color: rgb(19, 75, 107);/* fondo de la calculadora*/ 
+     padding: 16px; /* espacio entre botones*/
+     border-radius: 32px; /* borde de calculadora */
+    box-shadow: 15px 10px 0px 3px #00000033;/* sombra */
+   
+}
+
+button {
+     cursor:pointer;
+     margin: 5px;
+     padding: 0px;
+     border-radius: 32px;
+     font-size: 1.5em;
+     border: none;
+     background-color: rgb(19, 75, 107);
+     box-shadow:5px 5px 10px -3px #00000040, -5px -5px 15px 3px #35383a1f;
+
+}
+button:active { /* al darle click en los botones aparece otro color*/
+    background-color:rgb(12, 44, 63) ;
+}
+
+button:focus {
+    outline: none;
+}
+
+.col-2 {
+    grid-column: span 2;
+}
+
+.display{
+    grid-column:1 / -1; 
+    padding: 16px;
+    display: flex;
+    margin:10px 10px 20px;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color:#363636; /* color de la pantalla donde van los numeros */
+    border-radius: 32px; 
+    text-align: right;/* */
+    justify-content: space-between; /* se separen los valores*/
+    word-break:break-all; /* */
+    box-shadow: 0px 0px 0px 0px #00000033; /* profundidadn a la pantalla */
+
+}
+
+#valor_actual {
+    font-size: 1.5em;
+}
+
+#valor_anterior{
+    font-size: 2em;
+}
+
